@@ -106,8 +106,7 @@ BlocksApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvide
                         name: 'BlocksApp',
                         insertBefore: '#ng_load_plugins_before', 
                         files: [
-                            '/js/controllers/HomeController.js',
-                            '/css/todo-2.min.css'
+                            '/js/controllers/HomeController.js'
                         ]}]);
                 }]
             }

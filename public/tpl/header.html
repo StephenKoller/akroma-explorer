@@ -1,129 +1,22 @@
-<!-- BEGIN HEADER TOP -->
-<div class="page-header-top">
-    <div class="container">
-    <!-- BEGIN LOGO -->
-    <div class="page-logo">
-        <!-- <a href="/">
-            <img src="/img/explorer-logo.png" alt="logo" class="logo-default" />
-        </a> -->
-        <p>Trinity</p>
-    </div>
-    <!-- END LOGO -->
-            <!-- BEGIN RESPONSIVE MENU TOGGLER -->
-        <a href="javascript:;" class="menu-toggler btn btn-sm green-haze btn-outline">MENU</a>
-        <!-- END RESPONSIVE MENU TOGGLER -->
-        <!-- BEGIN TOP NAVIGATION MENU -->
-        <div class="top-menu">
-            <ul class="nav navbar-nav pull-right">
-                <li class="dropdown">
-                    <form name="form.searchForm" class="search-form">
-                        <div class="input-group">
-                            <input type="text" name="explorerSearch" class="form-control" placeholder="Search by Address / Txhash / BlockNum" ng-model="form.searchInput" ng-keyup="$event.keyCode == 13 ? searchQuery(form.searchInput) : null">
-                            <span class="input-group-btn">
-                                <a class="btn" ng-click="searchQuery(form.searchInput)">
-                                    <i class="icon-magnifier"></i>
-                                </a>
-                            </span>
-                        </div>
-                    </form>
-                </li>
-                
+<nav class="navbar navbar-expand-lg navbar-light bg-light mb-5">
+        <div class="container">
+            <a class="navbar-brand" href="https://explorer.trinityfx.org">Trinity Block Explorer</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-            </ul>
+            <div class="collapse navbar-collapse" id="nav">
+                <form name="form.searchForm" class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" name="explorerSearch" type="search" placeholder="Search by Address / Txhash / BlockNum" ng-model="form.searchInput" ng-keyup="$event.keyCode == 13 ? searchQuery(form.searchInput) : null" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="button" ng-click="searchQuery(form.searchInput)">Search</button>
+                </form>
+                <ul class="navbar-nav ml-auto py-3">
+                    <li class="nav-item"><a class="nav-link" href="https://trinityfx.org">Home (trintyfx.org) </a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://wallet.trinityfx.org">Wallet</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://explorer.trinityfx.org">Explorer</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://stats.trinityfx.org">Stats</a></li>
+                </ul>
+               
+            </div>
         </div>
-        <!-- END TOP NAVIGATION MENU -->
-    </div>
-</div>
-<!-- END HEADER TOP -->
-<!-- BEGIN HEADER MENU -->
-<div class="page-header-menu">
-    <div class="container">
-
-        <!-- BEGIN MEGA MENU -->
-        <div class="hor-menu hor-menu-light">
-            <ul class="nav navbar-nav">
-                <li class="active">
-                    <a href="/">Home</a>
-                </li>
-                <li class="menu-dropdown mega-menu-dropdown ">
-                    <a data-hover="megamenu-dropdown" data-close-others="true" data-toggle="dropdown" href="/token" class="dropdown-toggle"> Tokens
-                        <i class="fa fa-angle-down"></i>
-                    </a>
-                    <ul class="dropdown-menu" style="min-width: 410px">
-                        <li>
-                            <div class="mega-menu-content">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <ul class="mega-menu-submenu">
-                                            <li>
-                                                <a href="/token" class="iconify">
-                                                    <i class="icon-puzzle"></i> View All Tokens </a>
-                                            </li>
-                                            
-                                        </ul>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <ul class="mega-menu-submenu">
-                                            <li>
-                                                <a href="/" class="iconify">
-                                                    <i class="icon-paper-clip"></i> View Contracts (N/A)</a>
-                                            </li>
-                                        </ul>
-                                    </div>                                    
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </li>
-                <li class="menu-dropdown mega-menu-dropdown ">
-                    <a data-hover="megamenu-dropdown" data-close-others="true" data-toggle="dropdown" href="javascript:;" class="dropdown-toggle"> Stats
-                        <i class="fa fa-angle-down"></i>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li>
-                            <div class="mega-menu-content">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <ul class="mega-menu-submenu">
-                                            <li>
-                                                <a href="/stats/etc_hashrate">
-                                                    <i class="fa fa-line-chart"></i> HashRate Growth Chart </a>
-                                            </li>
-                                            <li>
-                                                <a href="/stats/miner_hashrate">
-                                                    <i class="fa fa-line-chart"></i> Miner Distribution Chart</a>
-                                            </li>
-                                            <li>
-                                                <a href="/stats/The_bomb_chart">
-                                                    <i class="fa fa-line-chart"></i> The bomb chart</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </li>
-                <li class="menu-dropdown classic-menu-dropdown ">
-                    <a data-hover="megamenu-dropdown" data-close-others="true" data-toggle="dropdown" href="javascript:;"> Misc
-                        <i class="fa fa-angle-down"></i>
-                    </a>
-                    <ul class="dropdown-menu pull-left">
-                        <li>
-                            <a href="/">
-                                <i class="icon-check"></i> Verify Contract (N/A)</a>
-                        </li>
-                        <li>
-                            <a href="/">
-                                <i class="icon-refresh"></i>
-                                <span class="title">Broadcast TXN (N/A)</span>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-        <!-- END MEGA MENU -->
-    </div>
-</div>
-<!-- END HEADER INNER -->
+    </nav>
